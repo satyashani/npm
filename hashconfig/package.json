@@ -1,0 +1,23 @@
+{
+  "name": "@smddev/hashconfig",
+  "version": "1.0.0",
+  "description": "Encode and Decode JSON configurations from environment variable",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/satyashani/npm.git"
+  },
+  "keywords": [
+    "JSON",
+    "Hash"
+  ],
+  "author": "@smddev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/satyashani/npm/issues"
+  },
+  "homepage": "https://github.com/satyashani/npm#readme"
+}
