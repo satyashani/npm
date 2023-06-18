@@ -7,13 +7,13 @@ hash key.
 
 ### Example
 
-** Require **
+**Require**
 
 ```js
 var hc = require("@smddev/hashconfig");
 ```
 
-** Build Hash **
+**Build Hash**
 
 ```js
 // Build from json
@@ -27,7 +27,7 @@ var hashedConfigString = hc.encode(source,"mysecret");
 var hashedConfigString = hc.fromFile("path/to/json/file","mysecret");
 ```
 
-** Load Environment Configuration **
+**Load Environment Configuration**
 
 ```js
 const hc = require("@smddev/hashconfig");
