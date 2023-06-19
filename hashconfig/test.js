@@ -7,8 +7,6 @@
 const assert = require("assert");
 const hasher = require("./index");
 
-//exports.fromFile = fromFile;
-
 var source = {
     key : "Value"
 };
