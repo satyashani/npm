@@ -3,12 +3,15 @@
 Get quick logger for your project.
 
 **Log Levels Supported**
-* Error
-* Warning
-* Notice
-* Action
-* Info
-* Debug
+* Error : 0
+* Warning : 1
+* Notice : 2
+* Action : 3
+* Info : 4
+* Debug : 5
+
+When log level is set to n, the messages at or below that level will be logger. E.g. setting log level
+to `Error` will log only `Error` messages.
 
 ### Example
 
