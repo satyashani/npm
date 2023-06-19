@@ -1,41 +1,32 @@
-# Hash Config
+# Logger
 
-Hash your json configuration to a string that can be passed as environment variable safely along with
-hash key.
+Get quick logger for your project.
 
-**Hashing Algorithm** : "aes-192-cbc"
+**Log Levels Supported**
+* Error
+* Warning
+* Notice
+* Action
+* Info
+* Debug
 
 ### Example
 
 **Require**
 
 ```js
-var hc = require("@smddev/hashconfig");
+var xlog = require("@smddev/logger");
 ```
 
-**Build Hash**
+**Get Logger**
 
 ```js
-// Build from json
-var source = {
-    key : "Value"
-};
-
-var hashedConfigString = hc.encode(source,"mysecret");
-
-// Build from file
-var hashedConfigString = hc.fromFile("path/to/json/file","mysecret");
+var logger = xlog.logger(xlog.levels.info);
 ```
 
-**Load Environment Configuration**
+**Logging**
 
 ```js
-const hc = require("@smddev/hashconfig");
-
-hc.load({
-    keyvarname : "configkey", // Name of environment variable that contains hash key
-    sourcevarname : "config"  // Name of environment variable that contains hashed config
-});
-
-const config = hc.get();
+logger.error(New Error("Test Error"), "Message");
+logger.warning("Heading","Message");
 ```
