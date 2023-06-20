@@ -13,21 +13,52 @@ const codes = [
     { code : "servererror" , text : "Server error %message%" }
 ];
 
+try{
+    error.declare();
+}catch(e){
+    assert.equal(e.code , "invalid_error");
+}
+
+try{
+    error.declare(null);
+}catch(e){
+    assert.equal(e.code , "invalid_error");
+}
+
+try{
+    error.declare('');
+}catch(e){
+    assert.equal(e.code , "invalid_error");
+}
+
+try{
+    error.declare(0);
+}catch(e){
+    assert.equal(e.code , "invalid_error");
+}
+
+codes.forEach((c) => {
+    error.declare(c.code,c.text);
+});
+
+// Get error object 
+var errors = error.get();
+
 // Raise Error
 try{
-    throw error.raise(codes[0]);
+    throw error.raise(errors.notfound);
 }catch(e){
     assert.equal(e.code , codes[0].code);
 }
 try{
-    throw error.raise(codes[2] , { message : "Memory overload" });
+    throw error.raise(errors.servererror , { message : "Memory overload" });
 }catch(e){
     assert.equal(e.message , "Server error Memory overload");
 }
 
 // Convert to JSON
 var f =  () => {
-    throw error.raise(codes[0]);
+    throw error.raise(errors.notfound);
 };
 
 try {

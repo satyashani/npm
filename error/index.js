@@ -4,6 +4,8 @@
  * Javascript file index.js 
  * *************************************************************** */
 
+var register = {};
+
 class JError extends Error {
     constructor(error) {
         super(error.text);
@@ -24,7 +26,7 @@ const fill = (text,params) => {
 };
 
 const errors = {
-    raise (error , params) {
+    raise : (error , params) => {
         if(!error || !error.code || !error.text){
             return new JError({
                 code : "invalid_error",
@@ -39,6 +41,21 @@ const errors = {
             e.text = fill(error.text,params);
         }
         return new JError(e);
+    },
+    
+    declare : (code , text) => {
+        if(!code){
+            throw new JError({
+                code : "invalid_error",
+                text : "Invalid error, code missing"
+            });
+        }
+        var t = text || code;
+        register[code] = { code : code, text : t };
+    },
+    
+    get : () => {
+        return register;
     }
 };
 
