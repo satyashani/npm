@@ -1,0 +1,25 @@
+{
+  "name": "@smddev/error",
+  "version": "1.0.0",
+  "description": "Error code generation, mapping, JSON convertible errors.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/satyashani/npm.git"
+  },
+  "keywords": [
+    "Error",
+    "Error",
+    "to",
+    "JSON"
+  ],
+  "author": "@smddev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/satyashani/npm/issues"
+  },
+  "homepage": "https://github.com/satyashani/npm#readme"
+}
