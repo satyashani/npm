@@ -1,0 +1,23 @@
+{
+  "name": "npmpacks",
+  "version": "1.0.0",
+  "description": "Public packages developed by @smddev",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/satyashani/npm.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/satyashani/npm/issues"
+  },
+  "homepage": "https://github.com/satyashani/npm#readme",
+  "workspaces": [
+    "packages/*"
+  ]
+}

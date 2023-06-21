@@ -1,6 +1,6 @@
 {
   "name": "@smddev/hashconfig",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Encode and Decode JSON configurations from environment variable",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/satyashani/npm.git"
+    "url": "git+ssh://git@github.com/satyashani/npm.git",
+    "directory" : "packages/hashconfig"
   },
   "keywords": [
     "JSON",

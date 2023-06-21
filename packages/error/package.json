@@ -1,18 +1,21 @@
 {
-  "name": "@smddev/logger",
-  "version": "1.0.1",
-  "description": "Control log levels, pass multiple arguments to log",
+  "name": "@smddev/error",
+  "version": "1.0.2",
+  "description": "Error code generation, mapping, JSON convertible errors.",
   "main": "index.js",
   "scripts": {
     "test": "node test.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/satyashani/npm.git"
+    "url": "git+ssh://git@github.com/satyashani/npm.git",
+    "directory" : "packages/error"
   },
   "keywords": [
-    "JSON",
-    "Hash"
+    "Error",
+    "Error",
+    "to",
+    "JSON"
   ],
   "author": "@smddev",
   "license": "ISC",
