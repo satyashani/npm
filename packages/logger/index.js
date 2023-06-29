@@ -35,8 +35,10 @@ var joinArgs = function (argv, starting) {
     var t = "",
         i = starting || 0;
     for (i; i < argv.length; i++){
-        if(typeof argv[i].toString === 'function'){
+        if(argv[i] && argv[i].toString && typeof argv[i].toString === 'function'){
             t += " " + argv[i].toString();
+        }else{
+            t += " " + argv[i];
         }
     }
     return t;
